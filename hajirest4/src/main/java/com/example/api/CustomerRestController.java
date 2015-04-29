@@ -67,7 +67,7 @@ public class CustomerRestController {
 	
 	//顧客更新
 	@RequestMapping(value="{id}", method=RequestMethod.PUT) //
-	Customer putCustomer(@PathVariable Integer id, @RequestBody Customer customer,@AuthenticationPrincipal LoginUserDetails userDetails){
+	Customer putCustomer(@PathVariable Integer id, @RequestBody Customer customer,@AuthenticationPrincipal LoginUserDetails userDetails ){
 		customer.setId(id);
 		return customerService.update(customer,userDetails.getUser());
 	}

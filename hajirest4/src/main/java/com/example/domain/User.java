@@ -20,7 +20,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table
+@Table(name="users")
 @ToString(exclude="customers")
 public class User {
 	 @Id //usernameを主キーにする
