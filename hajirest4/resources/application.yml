@@ -6,5 +6,11 @@ spring:
     password:
   jpa:
     hibernate.ddl-auto: validate
-spring.thymeleaf.cache: false
+    
+    
+thymeleaf.cache: false
+# 
 security.basic.enabled: false
+
+
+# this is comment
