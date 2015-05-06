@@ -101,6 +101,6 @@
 	</build>
 
 	<properties>
-		<java.versiion>1.8</java.versiion>
+		<java.version>1.8</java.version>
 	</properties>
 </project>
