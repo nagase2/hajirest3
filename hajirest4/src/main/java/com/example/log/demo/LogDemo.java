@@ -16,7 +16,11 @@ public class LogDemo {
 		
 		// TODO Auto-generated method stub
 		    log.info("Hello World");
+		    
 		    log.debug("Temperature set to {}. Old temperature was {}.", s,s1);
+		    
+		    log.warn("this is warning message");
+
 	}
 
 }
