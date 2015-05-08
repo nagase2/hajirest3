@@ -1,5 +1,7 @@
 package com.example;
 
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,11 +18,12 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebMvcSecurity
+@Slf4j
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
  @Override
  public void configure(WebSecurity web) throws Exception{
 	 //静的リソースは無視するように設定。
-	 web.ignoring().antMatchers("/webjars/**", "/css/**");
+	 web.ignoring().antMatchers("/webjars/**", "/css/**","/jsptest");
  }
  
  @Override
@@ -28,12 +31,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      http.authorizeRequests()
              .antMatchers("/loginForm").permitAll()
              .anyRequest().authenticated();
+     //ログインページ関連の情報を指定
      http.formLogin().loginProcessingUrl("/login")
              .loginPage("/loginForm")
              .failureUrl("/loginForm?error")
              .defaultSuccessUrl("/customers", true)
              .usernameParameter("username").passwordParameter("password")
              .and();
+     
      http.logout()
              .logoutRequestMatcher(new AntPathRequestMatcher("/logout**"))
              .logoutSuccessUrl("/loginForm");

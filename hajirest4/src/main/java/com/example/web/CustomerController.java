@@ -40,7 +40,7 @@ public class CustomerController {
 		model.addAttribute("customers",customers); //検索結果をModelに設定。画面からはcustomersを用いてアクセスできる
 	
 		//classpath:templates/+ビュー名＋.htmlが画面のPathとなる。この場合、classpath:templates/customers/list.html
-		return "customers/list"; //なんでここだけRedirectではないのか
+		return "customers/list.html"; //なんでここだけRedirectではないのか
 		/* 仮説：Redirectではない時は、直接このURLにアクセスすることになる。そこには、ファイルが存在している必要がある。
 		 * */
 	}
@@ -80,7 +80,7 @@ public class CustomerController {
 		//現在の値を画面に表示するため、顧客情報をCustomerFormにコピーする
 		BeanUtils.copyProperties(customer, form);
 		System.out.println("show edit screen");
-		return "customers/edit";
+		return "customers/edit.html";
 	}
 	
 	//
@@ -125,7 +125,7 @@ public class CustomerController {
 		System.out.println(nagase.toString());
 		
 		
-		return "customers/nagase";
+		return "customers/nagase.html";
 	}
 
 }
