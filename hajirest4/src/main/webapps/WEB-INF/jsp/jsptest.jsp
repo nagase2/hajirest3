@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><spring:message code="label.top" /></title>
+<title>xxxxxx</title>
 </head>
 <body>
+ssssssssssssss
 </body>
 </html>
