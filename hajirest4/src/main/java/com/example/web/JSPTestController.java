@@ -5,11 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springsource.loaded.Log;
 
 @Controller
-public class LoginController {
-	@RequestMapping("loginForm")
-	String loginForm() {
-		Log.log("LoginFormが呼ばれました。");
-		return "loginForm";
+public class JSPTestController {
+
+	
+	@RequestMapping("/jsptest")
+	String JSPTest() {
+		Log.log("JSP test が呼ばれました。");
+		return "jsptest";
 	}
 }
 

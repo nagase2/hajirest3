@@ -1,3 +1,4 @@
+
 spring:
   datasource:
     driverClassName: org.h2.Driver
@@ -6,5 +7,11 @@ spring:
     password:
   jpa:
     hibernate.ddl-auto: validate
-spring.thymeleaf.cache: false
+#spring.thymeleaf.cache: false
+#spring.view.prefix: /WEB-INF/jsp/
+#spring.view.suffix: .jsp
+#spring.thymeleaf.prefix: classpath:/thymeleaf/
+#spring.thymeleaf.suffix:
+#spring.thymeleaf.viewNames: '*.html,*.xhtml'
+
 security.basic.enabled: false
