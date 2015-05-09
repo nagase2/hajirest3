@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
  @Override
  public void configure(WebSecurity web) throws Exception{
 	 //静的リソースは無視するように設定。
-	 web.ignoring().antMatchers("/webjars/**", "/css/**","/jsptest");
+	 web.ignoring().antMatchers("/webjars/**", "/css/**","/jsptest*");
  }
  
  @Override

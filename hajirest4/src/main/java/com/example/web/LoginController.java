@@ -11,7 +11,7 @@ import org.springsource.loaded.Log;
 public class LoginController {
 	@RequestMapping("loginForm")
 	String loginForm() {
-		log.info("LoginFormが呼ばれました。");
+		log.info("LoginFormが呼ばれました。!!!!!!llllooooo");
 		return "loginForm.html";
 	}
 }

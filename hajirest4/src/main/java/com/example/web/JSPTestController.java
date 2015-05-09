@@ -12,7 +12,7 @@ public class JSPTestController {
 	
 	@RequestMapping("/jsptest")
 	String JSPTest() {
-		log.info("JSP test が呼ばれました。");
+		log.info("JSP test が呼ばれました。!!");
 		return "jsptest";
 	}
 }

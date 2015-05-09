@@ -1,0 +1,9 @@
+
+.project
+
+*.log
+
+
+hajirest4/src/main/resources/logback.out.xml
+
+hajirest4/logs/app.2015-05-08.log.tar.gz
