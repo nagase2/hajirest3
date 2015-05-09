@@ -78,6 +78,17 @@
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity3</artifactId>
 		</dependency>
+		<dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+		    <artifactId>tomcat-embed-jasper</artifactId>
+		    <scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.spockframework</groupId>
+			<artifactId>spock-core</artifactId>
+		</dependency>
 	</dependencies>
 
 	<!-- Package as an executable jar -->
@@ -95,8 +106,12 @@
 						<artifactId>springloaded</artifactId>
 						<version>1.2.1.RELEASE</version>
 					</dependency>
+					
+			
 				</dependencies>
 			</plugin>
+			
+			 
 		</plugins>
 	</build>
 
