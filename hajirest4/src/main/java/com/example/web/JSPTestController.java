@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class JSPTestController {
 
 	
-	@RequestMapping("/jsptest")
+	@RequestMapping("/jsptest2")
 	String JSPTest() {
 		log.info("JSP test が呼ばれました。!!");
 		return "jsptest";
