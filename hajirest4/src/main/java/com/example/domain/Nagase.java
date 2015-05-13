@@ -26,4 +26,8 @@ public class Nagase {
 	private String name2;
 //	private String address;
 //	private String tell;
+	
+	public int calc(int a){
+		return a*3;
+	}
 }

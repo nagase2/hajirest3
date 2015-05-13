@@ -22,6 +22,5 @@ class CalcSpec2 extends Specification{
         1 | 3 | 4
         7 | 4 | 11
         0 | 0 | 0
-		
     }
 }

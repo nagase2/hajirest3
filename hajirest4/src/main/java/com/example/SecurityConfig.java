@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
  @Override
  public void configure(WebSecurity web) throws Exception{
 	 //静的リソースは無視するように設定。
-	 //TODO:なぜpublicは認証無視できない？
+	 //TODO:なぜpublicは認証無視できない？SplingSecurityをもう少し確認する必要ありかな
 	 web.ignoring().antMatchers("/webjars/**", "/css/**","/public/**","jsptest");
  }
  
@@ -31,6 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
  protected void configure(HttpSecurity http) throws Exception {
      http.authorizeRequests()
              .antMatchers("/loginForm").permitAll()
+             .antMatchers("/public/**").permitAll()
              .anyRequest().authenticated();
      //ログインページ関連の情報を指定
      http.formLogin().loginProcessingUrl("/login")
